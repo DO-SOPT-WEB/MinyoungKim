@@ -1,0 +1,93 @@
+h2 {
+	background-color: palegoldenrod;
+    color: black;
+    text-align: center;
+    line-height: 2;
+    font-family: sans-serif;
+}
+h3{
+    font-size: 20px;
+    letter-spacing: 4px;
+    line-height: 0.5;
+    margin-bottom: 0.01%;
+}
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+.stylebox{
+    background-color: beige;
+    height:80%;
+    width: 80%;
+    text-align: center;
+    border: 5px solid #e7b7b7;
+    align-items: center;
+    display: flex; flex-direction: column;
+    justify-content: space-evenly;
+}
+.stylebox p {
+    text-decoration: underline;
+    font-size: 20px;
+    letter-spacing: 3px;
+    height: 3%;
+    margin-top: 8px;
+}
+
+.inout {
+    text-align: center;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    width:80%;
+    height:40px;
+    gap:10px;
+}
+
+.income {
+    border: 2px solid rgb(25, 111, 224);
+    width:30%;
+    box-sizing: border-box;
+    line-height: 2.5;
+}
+
+.expense {
+    border: 2px solid rgb(215, 6, 6);
+    width:30%;
+    box-sizing: border-box;
+    line-height: 2.5;
+}
+
+.borderline{
+    border-top: 1px solid #3783a9;
+    margin: 0px 0px;
+}
+/* Top 버튼 스타일 */
+.footerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add {
+    bottom: 10px;
+    right: 10px;
+    background-color: #c8def5;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #add:hover {
+    background-color: #efc9e6;
+  }
