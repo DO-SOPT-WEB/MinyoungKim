@@ -1,8 +1,10 @@
-h2 {
+header {
 	background-color: palegoldenrod;
     color: black;
     text-align: center;
     line-height: 2;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 h3{
     color:black;
