@@ -13,6 +13,8 @@ h4{
     position: sticky;
     background-color: rgb(245, 208, 214);
     line-height: 2;
+    top:0;
+    z-index:1;
 }
 /*position: sticky;*/
 body {
@@ -83,6 +85,12 @@ ul li a:hover {
     font-size: 16px;
   }
   
-  #topButton:hover {
-    background-color: #efc9e6;
-  }
+#topButton:hover {
+    background-color: #efc9e6; 
+}
+
+*{
+    box-sizing:border-box;
+    margin:auto;
+    font-weight:600;
+}
