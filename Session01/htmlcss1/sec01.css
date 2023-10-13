@@ -5,8 +5,8 @@
 .flexbox01{
     flex-wrap:wrap;
     white-space: nowrap;
-     /* 아이템의 너비 설정 (여기서는 3개로 나눔) */
     display: flex;
+    flex-direction: row;
 }
 .sec01item {
     width:200px;
