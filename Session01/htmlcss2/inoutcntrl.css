@@ -1,0 +1,24 @@
+.sec02{
+    margin-top: 10px;
+    height:30px;  
+    justify-content: center;
+    display: flex;
+    flex-direction: center;
+}
+.stylecheck{
+    gap:5px;
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    height: 100%;
+}
+
+label {
+    font-size: 15px;
+    font-weight:bold;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}

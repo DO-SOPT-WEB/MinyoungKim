@@ -1,0 +1,27 @@
+.sec01img{
+    justify-content: center; /* 이미지를 가운데 정렬 */
+    align-items: center;
+}
+.flexbox01{
+    flex-wrap:wrap;
+    white-space: nowrap;
+     /* 아이템의 너비 설정 (여기서는 3개로 나눔) */
+    display: flex;
+}
+.sec01item {
+    width:200px;
+    height: 200px;
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /* 이미지 간 간격 설정 */
+}
+
+.sec01item img{
+    width:100%;
+    height: 100%;
+}
+
+
+
