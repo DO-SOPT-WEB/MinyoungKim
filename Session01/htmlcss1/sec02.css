@@ -8,6 +8,7 @@
     height:300px;
     justify-content: center;
     gap:10px;
+    position: relative;
 }
 .big{
     width:50%;
