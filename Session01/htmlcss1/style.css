@@ -91,6 +91,5 @@ ul li a:hover {
 
 *{
     box-sizing:border-box;
-    margin:auto;
-    font-weight:600;
+    font-weight:200;
 }
