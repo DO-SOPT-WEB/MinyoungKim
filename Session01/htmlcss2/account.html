@@ -4,111 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="header.css"/>
-    <link rel="stylesheet" href="date.css"/>
-    <link rel="stylesheet" href="inoutcntrl.css"/>
-    <link rel="stylesheet" href="inoutlist.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>김밍밍</title>
 </head>
 <body>
     <header>민영이 가계부**</header>
-    <div class="container">
-        <div class="stylebox">
-            <h3>나의 자산</h3>
-            <p>159400</p>
-            <div class="inout">
-                <div class="income">+: 250,000원</div>
-                <div class="expense">-: 90,600원</div>
-            </div>
-        </div>
-    </div>
-    <div class="sec01">
-        <button id="prevBtn"><b><</b></button>
-        <span id="currentDate">10/13</span>
-        <button id="nextBtn"><b>></b></button>
-    </div>
-    <div class="sec02">
-        <div class="stylecheck">
-            <input type="checkbox" id="incomeCheckbox" checked>
-            <label for="inCheck">수입</label>
-            <input type="checkbox" id="expenseCheckbox" checked>
-            <label for="outCheck">지출</label>
-        </div>
-    </div>
     <div class="borderline"></div>
-    <div class="inoutlist">
-        <div class="items">
-            <div class="category">식비</div>
-            <div class="description">스타벅스</div>
-            <div class="amountM">- 10,000원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
+    <section class="summary-section">
+        <article class="summary-article">
+            <h3>나의 자산</h3>
+            <span class="total">159400</span>
+            <div class="summary-article-details">
+                <div class="summary-article-details-in"><p>+</p><span>90,600</span></div>
+                <div class="summary-article-details-out"><p>-</p><span>250,000</span></div>
             </div>
-        </div>
-        <div class="items">
-            <div class="category">용돈</div>
-            <div class="description">고모부</div>
-            <div class="amountP">+ 250,000원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
+        </article>
+    </section>
+
+    <section>
+        <section class="details-container">
+            <div class="date-container">
+                <button type="button"><b><</b></button>
+                <span id="currentDate">10/13</span>
+                <button type="button"><b>></b></button>
             </div>
-        </div>
-        <div class="items">
-            <div class="category">식비</div>
-            <div class="description">스타벅스</div>
-            <div class="amountM">- 5,000원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
+            <div class="checkbox-container">
+                <label class="checkbox-in">
+                    <input type="checkbox"checked />수입</label>
+                <label class="checkbox-out">
+                    <input type="checkbox"checked />지출</label>
             </div>
-        </div>
-        <div class="items">
-            <div class="category">서적</div>
-            <div class="description">자구교재</div>
-            <div class="amountM">- 50,000원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
-            </div>
-        </div>
-        <div class="items">
-            <div class="category">식비</div>
-            <div class="description">냉우동</div>
-            <div class="amountM">- 18,000원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
-            </div>
-        </div>
-        <div class="items">
-            <div class="category">쇼핑</div>
-            <div class="description">머리띠</div>
-            <div class="amountM">- 4,900원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
-            </div>
-        </div>
-        <div class="items">
-            <div class="category">식비</div>
-            <div class="description">초코칩</div>
-            <div class="amountM">- 1,500원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
-            </div>
-        </div>
-        <div class="items">
-            <div class="category">학용품</div>
-            <div class="description">화이트</div>
-            <div class="amountM">- 1,200원</div>
-            <div class="deleBtn">
-                <button id="deleteBtn">x</button>
-            </div>
-        </div>
-        <!-- 다른 내역 항목들 -->
-    </div>
+        </header>
+        <div class="borderline"></div>
+
+        <ul class="inoutlist">
+            <li>
+                <span class="list-category">식비</span>
+                <span class="list-description">스타벅스</span>
+                <span class="list-amount-minus">- 10,000원</span>
+                <button type="button">X</button>
+            </li>
+            <li>
+                <span class="list-category">용돈</span>
+                <span class="list-description">고모부</span>
+                <span class="list-amount-plus">+ 250,000원</span>
+                <button type="button">X</button>
+            </li>
+            <li>
+            <span class="list-category">식비</span>
+            <span class="list-description">스타벅스</span>
+            <span class="list-amount-minus">- 5,000원</span>
+            <button type="button">X</button>
+            </li>
+            <li>
+                <span class="list-category">서적</span>
+                <span class="lis-description">자구교재</span>
+                <span class="list-amount-minus">- 50,000원</span>
+                <button type="button">X</button>
+            </li>
+            <li>
+                <span class="list-category">식비</span>
+                <span class="list-description">냉우동</span>
+                <span class="list-amount-minus">- 18,000원</span>
+                <button type="button">X</button>
+            </li>
+            <li>
+            <span class="list-category">쇼핑</span>
+            <span class="list-description">머리띠</span>
+            <span class="list-amount-minus">- 4,900원</span>
+            <button type="button">X</button>
+            </li>
+            <li>
+                <span class="list-category">식비</span>
+                <span class="list-description">초코칩</span>
+                <span class="list-amount-minus">- 1,500원</span>
+                <button type="button">X</button>
+            </li>
+            <li>
+                <span class="list-category">학용품</span>
+                <span class="list-description">화이트</span>
+                <span class="list-amount-minus">- 1,200원</span>
+                <button type="button">X</button>
+            </li>
+        </ul>
+    </section>
     <footer>
-        <div class="footerContent">
-            <button id="add"><div style="cursor:pointer;">추가</div>
-            </button>
-        </div>
+        <button type="button">
+            <button id="add">추가</div>
+        </button>
     </footer>
 </body>
-
 </html>
