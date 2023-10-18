@@ -5,93 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="sec01.css"/>
-    <link rel="stylesheet" href="sec02.css"/>
-    <link rel="stylesheet" href="sec03.css"/>
 
-    <title>김밍밍</title>
+    <title>1차세미나 사진관 과제</title>
 </head>
 <body>
-    <header>NewYork</header>
-    <div class="container">
-        <section class="prSction">
-            <!-- 이미지 미리보기 항목 -->
-            <div class="prItem">
-                <img src="wk1/01.png" alt="Photo">
-            </div>
-            <div class="prItem">
-                <img src="wk1/02.png" alt="Photo">
-            </div>
-            <div class="prItem">
-                <img src="wk2/01.png" alt="Photo">
-            </div>
-            <div class="prItem">
-                <img src="wk2/02.png" alt="Photo">
-            </div>
-            <div class="prItem">
-                <img src="wk3/01.png" alt="Photo">
-            </div>
-            <div class="prItem">
-                <img src="wk3/02.png" alt="Photo">
-            </div>
-            <div class="prItem">
-                <img src="wk1/04.png" alt="Photo">
-            </div>
-            <!-- 추가 이미지 항목들 추가 가능 -->
-        </section>
-    </div>
+    <header>김밍밍 인 뉴욕</header>
+
+    <!--preview-->
+    <section class="preview">
+        <img src="wk1/01.png" alt="Photo">
+        <img src="wk1/02.png" alt="Photo">
+        <img src="wk2/02.png" alt="Photo">
+        <img src="wk3/01.png" alt="Photo">
+        <img src="wk3/02.png" alt="Photo">
+        <img src="wk1/04.png" alt="Photo">
+    </section>
+
+    <!--네비게이션-->
     <nav>
-        <h3>category</h3>
+        <span>category</span>
         <ul>
-            <li><a href="#sec01">[1] 뉴욕은 낭만이 넘치는 도시에요</a></li>
-            <li><a href="#sec02">[2] 가을맞이에 한창인 뉴욕</a></li>
-            <li><a href="#sec03">[3] 애증의 뉴욕 이놈자식 그래도 사랑해</a></li>
+            <li><a href="#category-1">[1] 뉴욕은 낭만이 넘치는 도시에요</a></li>
+            <li><a href="#category-2">[2] 가을맞이에 한창인 뉴욕</a></li>
+            <li><a href="#category-3">[3] 애증의 뉴욕 이놈자식 그래도 사랑해</a></li>
         </ul>
     </nav>
-        <section id="sec01" class="sec01img"> 
-            <h4>뉴욕은 낭만이 넘치는 도시에요</h4>
-            <div class="flexbox01">
-                <div class="sec01item"><img src="wk1/02.png"></div>
-                <div class="sec01item"><img src="wk1/08.png"></div>                   
-                <div class="sec01item"><img src="wk1/03.png"></div>
-                <div class="sec01item"><img src="wk1/04.png"></div>
-                <div class="sec01item"><img src="wk1/05.png"></div>
-                <div class="sec01item"><img src="wk1/11.png"></div>
-                <div class="sec01item"><img src="wk1/09.png"></div>
-                <div class="sec01item"><img src="wk1/10.png"></div>
-                <div class="sec01item"><img src="wk1/01.png"></div>
+
+    <!--category1-->
+    <section class="section-1">
+        <h4 id="category-1">뉴욕은 낭만이 넘치는 도시에요</h4>
+            <div class="images-1">
+                <img src="wk1/02.png">
+                <img src="wk1/08.png">          
+                <img src="wk1/03.png">
+                <img src="wk1/04.png">
+                <img src="wk1/05.png">
+                <img src="wk1/11.png">
+                <img src="wk1/09.png">
+                <img src="wk1/10.png">
+                <img src="wk1/01.png">
             </div>
-        </section>
-        <section id="sec02" class="sec02img"> 
-            <h4>가을맞이에 한창인 뉴욕</h4>
-            <div class="flexbox02">
-                <div class="big"><img src="wk2/04.png"></div>
-                <div class="small">
-                    <img src="wk2/06.png">
-                    <img src="wk2/01.png">
-                    <img src="wk2/09.png">
-                    <img src="wk2/07.png">
-                </div>
+    </section>
+
+    <!--category2-->
+    <section class="section-2"> 
+        <h4 id="category-2">가을맞이에 한창인 뉴욕</h4>
+        <div class="images-2">
+            <div class="images-2-left">
+                <img src="wk2/04.png">
             </div>
-        </section>
-        <section id="sec03" class="sec03img"> 
-            <h4>애증의 뉴욕 이놈자식 그래도 사랑해</h4>
-            <div class="grid-container">
-                <div class="grid-item"><img src="wk3/10.png"></div>
-                <div class="grid-item"><img src="wk3/12.png"></div>
-                <div class="grid-item"><img src="wk3/03.png"></div>
-                <div class="grid-item"><img src="wk3/11.png"></div>
-                <div class="grid-item"><img src="wk3/01.png"></div>
-                <!-- 원하는 만큼 이미지 추가 -->
+            <div class="images-2-right">
+                <img src="wk2/06.png">
+                <img src="wk2/01.png">
+                <img src="wk2/09.png">
+                <img src="wk2/07.png">
             </div>
-        </section>
-        <footer>
-            <div class="footerContent">
-                <p>&copy; 2023 Sopt</p>
-                <button id="topButton"><div style="cursor:pointer;" onclick="window.scrollTo(0,0);">Top</div>
-                </button>
-            </div>
-        </footer>
-    </div>
+        </div>
+    </section>
+
+    <!--category3-->
+    <section class="section-3"> 
+        <h4 id="category-3">애증의 뉴욕 이놈자식 그래도 사랑해</h4>
+        <div class="container-3">
+            <img src="wk3/10.png">
+            <img src="wk3/12.png">
+            <img src="wk3/03.png">
+            <img src="wk3/11.png">
+            <img src="wk3/01.png">
+            <!-- 원하는 만큼 이미지 추가 -->
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <span>&copy; 2023 Sopt</span>
+        <button id="top-button"><div style="cursor:pointer;" onclick="window.scrollTo(0,0);">Top</div></button>
+    </footer>
 </body>
 </html>

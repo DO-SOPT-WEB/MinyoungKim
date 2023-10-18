@@ -203,7 +203,7 @@ footer{
     align-items: center;
     display: flex;
     justify-content: center;
-
+    
     bottom: 0;
 
     height:3rem;
@@ -215,8 +215,8 @@ footer button{
     margin: 0;
     color: #000000;
 
-    border-radius: 0.1rem;
-    font-size: 1.8rem;
+    border-radius:0.1rem;
+    font-size: 1rem;
 }
 #add:hover {
     background-color: #efc9e6;
