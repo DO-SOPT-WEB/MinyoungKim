@@ -109,7 +109,15 @@ ul li a:hover {
     flex-shrink:1;
 
     object-fit: cover;
+    
+    transition:transform 0.5s;
 }
+
+/*심화과제*/
+.images-1 img:hover{
+    transform: translateY(-1%);
+}
+
 
 /*section-2*/
 .images-2{
