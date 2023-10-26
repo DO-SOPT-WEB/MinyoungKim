@@ -89,16 +89,28 @@ ul li a:hover {
 }
 
 /*section-1*/
+.images-1-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+    padding: 0;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+
 .images-1{
     display: flex;
 
-    gap:1rem;
+    position: relative;
 
-    flex-wrap:wrap;
-    white-space: nowrap;
+    flex-grow: 1;
 
-    margin-top:1rem;
-    margin-bottom:1rem;
+    justify-content: space-around;
+    z-index: 0;
 }
 
 .images-1 img{
@@ -109,15 +121,34 @@ ul li a:hover {
     flex-shrink:1;
 
     object-fit: cover;
-    
-    transition:transform 0.5s;
 }
 
-/*심화과제*/
-.images-1 img:hover{
-    transform: translateY(-1%);
+.imgages-1 img :hover {
+    transform: translateY(-5px);
 }
 
+.details{
+    display: none;
+    position: absolute;
+
+    width: 90%;
+    height: 90%;
+
+    padding: 1rem;
+}
+
+.show-descriptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(53, 50, 50, 0.455);
+    gap: 1rem;
+  
+    font-weight: 700;
+    color: #e7f5fd;
+}
 
 /*section-2*/
 .images-2{
@@ -179,6 +210,7 @@ ul li a:hover {
     width:100%; /* 그리드 아이템 내의 이미지 최대 너비 설정 */
     height: 100%; /* 비율에 맞게 이미지 높이 조절 */
     object-fit: cover;
+
   }
 .container-3 img:first-child {
     grid-row: 1/ 2;
