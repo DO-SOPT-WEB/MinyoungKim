@@ -22,6 +22,7 @@ header{
 
     background-color: palegoldenrod;
     color: black;
+    margin-bottom: 1rem;
 }
 
 /*preview*/
@@ -213,17 +214,16 @@ footer span{
     line-height: 2;
     font-size: 1.5rem;
 }
-#top-button{
-    position:fixed;
-    bottom: 1rem;
-    right: 1rem;
+#button-top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
     padding: 1rem;
+    z-index: 1;
 
     background-color: #c8def5;
     color: #000000;
-    font-size: 2rem;
-}
-  
-#top-button:hover {
-    background-color: #9188c4; 
-}
+    font-size: 1rem;
+}    
+
