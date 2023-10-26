@@ -27,26 +27,10 @@ header {
     
 }
 
-/* summary section 
-    <section class="summary-section">
-        <article class="summary-article">
-            <h3>나의 자산</h3>
-            <span class="total">159400</span>
-            <div class="summary-article-details">
-                <div class="summary-article-details-in"><span>90,600원</span></div>
-                <div class="summary-article-details-out"><span>250,000원</span></div>
-            </div>
-        </article>
-    </section>
-*/
 .summary-section{
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;*/
-
     padding: 1rem;
 }
+
 .summary-article{
     display: flex;
     flex-direction: column;
@@ -93,14 +77,6 @@ h3{
     color:blue;
 }
 
-/* date section
-    <div class="date-container">
-        <button type="button"><b><</b></button>
-        <span id="currentDate">10/13</span>
-        <button type="button"><b>></b></button>
-    </div>
-*/
-
 .details-container{
     position: fixed;
 }
@@ -120,14 +96,6 @@ button{
     cursor:pointer;
 }
 
-/* checkbox
-<div class="checkbox-container">
-    <label class="checkbox-in">
-        <input type="checkbox"checked />수입</label>
-    <label class="checkbox-out">
-        <input type="checkbox"checked />지출</label>
-</div>
-*/
 .checkbox-container{
     display: flex;
     justify-content: space-between;
@@ -191,13 +159,6 @@ button{
     color:blue;
 }
 
-/*
-<footer>
-    <button type="button">
-        <button id="add"><div style="cursor:pointer;">추가</div>
-    </button>
-</footer>
-*/
 footer{
     position: fixed;
     align-items: center;

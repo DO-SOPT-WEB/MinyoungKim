@@ -29,8 +29,7 @@ header{
     width:100vw;
 
     display:flex;
-    column-gap:1rem;
-    margin-top:1rem;
+    gap:1rem;
     margin-bottom:0.5rem;
 
     overflow-x: auto;
@@ -218,7 +217,7 @@ footer span{
     position:fixed;
     bottom: 1rem;
     right: 1rem;
-    padding: 1rem 1rem;
+    padding: 1rem;
 
     background-color: #c8def5;
     color: #000000;
