@@ -139,8 +139,8 @@ function handleDelete(id) {
   listDeleteModal.style.display = "flex"; // 모달 띄우기
   const deleteYesBtn = document.querySelectorAll(".delete_yes")[0];
   const deleteNoBtn = document.querySelectorAll(".delete_no")[0];
+  //yes no 클릭시
   deleteYesBtn.onclick = function () {
-    //id요소 하나 삭제
     historyList.forEach((el, idx) => {
       el.id === id && historyList.splice(idx, 1);
     });
