@@ -1,0 +1,49 @@
+.inoutlist {
+    display: flex;
+    flex-direction: column;
+     /* 일정 height 이상이면 스크롤 표시 */
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height:40vh;
+    width:100%;
+    align-items: center;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    background-color: #f8f8f8;
+    width: 90%;
+}
+
+.category {
+    flex: 1;
+    font-weight: bold;
+}
+
+.description {
+    flex: 1.5;
+}
+
+.amountM {
+    flex: 1;
+    color:red;
+}
+.amountP{
+    flex: 1;
+    color: blue;
+}
+
+.deleteBtn {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
+}

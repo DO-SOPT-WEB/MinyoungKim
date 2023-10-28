@@ -1,0 +1,54 @@
+
+    <!--category1-->
+    <section class="section-1">
+        <h4 id="category-1">뉴욕은 낭만이 넘치는 도시에요</h4>
+            <div class="images-1">
+                <img src="wk1/02.png">
+                <img src="wk1/08.png">          
+                <img src="wk1/03.png">
+                <img src="wk1/04.png">
+                <img src="wk1/05.png">
+                <img src="wk1/11.png">
+                <img src="wk1/09.png">
+                <img src="wk1/10.png">
+                <img src="wk1/01.png">
+            </div>
+    </section>
+
+    <!--category2-->
+    <section class="section-2"> 
+        <h4 id="category-2">가을맞이에 한창인 뉴욕</h4>
+        <div class="images-2">
+            <div class="big">
+                <img src="wk2/04.png">
+            </div>
+            <div class="small">
+                <img src="wk2/06.png">
+                <img src="wk2/01.png">
+                <img src="wk2/09.png">
+                <img src="wk2/07.png">
+            </div>
+        </div>
+    </section>
+
+    <!--category3-->
+    <section class="section-3"> 
+        <h4 id="category-3">애증의 뉴욕 이놈자식 그래도 사랑해</h4>
+        <div class="container-3">
+            <img src="wk3/10.png">
+            <img src="wk3/12.png">
+            <img src="wk3/03.png">
+            <img src="wk3/11.png">
+            <img src="wk3/01.png">
+            <!-- 원하는 만큼 이미지 추가 -->
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="footerContent">
+            <p>&copy; 2023 Sopt</p>
+            <button id="topButton"><div style="cursor:pointer;" onclick="window.scrollTo(0,0);">Top</div></button>
+        </div>
+    </footer>
+*/

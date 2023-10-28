@@ -1,0 +1,184 @@
+*{
+    /* 화면 전체 중앙 정렬 */
+    margin:0 auto; 
+}
+
+body{
+    border-spacing:0;
+    /* vw와 vh : 상대적 길이 단위 */ 
+    width:100vw;
+    height:100vh;
+
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* 민영이 가계부 헤더 꾸미기 */
+header {
+    width:90vw;
+    line-height: 3rem;
+    padding:0.4rem;
+
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    background-color: beige;
+    
+}
+
+.summary-section{
+    padding: 1rem;
+}
+
+.summary-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: beige;
+    border: 0.5rem solid #e7b7b7;    
+}
+
+h3{
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    margin-top:1rem;
+}
+
+.total{
+    text-decoration: underline;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    height: 3rem;
+    margin-top: 0.8rem;
+}
+
+.summary-article-details{
+    display: flex; 
+    justify-content:center;
+    text-align:center;
+
+    margin-top:0.4rem;
+
+    font-size: 1.5rem;
+    column-gap: 1.5rem;
+}
+
+.summary-article-details-out{
+    display: flex;
+    justify-content: space-between;
+    color:red;
+}
+.summary-article-details-in {
+    display: flex;
+    justify-content: space-between;
+    color:blue;
+}
+
+.details-container{
+    position: fixed;
+}
+.date-container{   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+
+    column-gap:0.1rem;
+}
+
+button{
+    background:lightblue;
+    border:0;
+    cursor:pointer;
+}
+
+.checkbox-container{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top:1rem;
+    width: 50vw;
+    height: 5vh;
+}
+
+.checkbox-in{
+    font-size:1rem;
+}
+
+.checkbox-out{
+    font-size:1rem;
+}
+
+.borderline{
+    height: 0.3rem;
+
+    background-color: #e7b7b7;
+
+    margin-top: 0.001rem;
+    margin:0;
+}
+
+/*목록*/
+.inoutlist{
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+    row-gap: 0.3rem;
+
+    width: 100vw;
+    height: 40vh;
+    padding:0.5rem 0.1rem;
+}
+
+.inoutlist li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding:0.5rem 1rem;
+    border: 0.1rem solid #ccc;
+    margin: 0.5rem;
+    background-color: #f8f8f8;
+}
+
+.list-category{
+    font-weight: bold;
+}
+
+.list-amount-minus{
+    color:red;
+}
+
+.list-amount-plus{
+    color:blue;
+}
+
+footer{
+    position: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+    bottom: 0;
+
+    height:3rem;
+    width:100vw;
+
+}
+
+footer button{
+    margin: 0;
+    color: #000000;
+
+    border-radius:0.1rem;
+    font-size: 1rem;
+}
+#add:hover {
+    background-color: #efc9e6;
+  }
