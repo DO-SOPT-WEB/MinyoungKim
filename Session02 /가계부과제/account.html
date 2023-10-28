@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>2차세미나 가계부 과제</title>
+  </head>
+  <body>
+    <header><h1>민영이 가계부**</h1></header>
+    <section class="summary-article"></section>
+
+    <section class="manage">
+      <nav class="manage-date">
+        <button>〈</button>
+        <p>10월 13일</p>
+        <button>〉</button>
+      </nav>
+
+      <section class="manage-list">
+        <header>
+          <h3>내역 리스트</h3>
+          <form>
+            <input name="income" type="checkbox" id="income-ID" checked />
+            <label for="income-ID">수입</label>
+            <input name="outcome" type="checkbox" id="outcome-ID" checked />
+            <label for="outcome-ID">지출</label>
+          </form>
+        </header>
+        <ul></ul>
+      </section>
+    </section>
+
+    <footer>
+      <button type="button">+</button>
+    </footer>
+
+    <section class="list-delete-modal">
+      <section class="modal">
+        <p>정말 삭제하시겠습니까?</p>
+        <div>
+          <button type="button" class="delete_yes">YES</button>
+          <button type="button" class="delete_no">NO</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="add_list"></section>
+
+    <script src="account.js"></script>
+  </body>
+</html>

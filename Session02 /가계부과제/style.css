@@ -1,0 +1,362 @@
+html {
+    min-width: 375px;
+  }
+  /*header*/
+  header {
+    text-align: center;
+  
+    top: 0;
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+  
+    line-height: 3rem;
+  
+    background-color: palegoldenrod;
+    color: black;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* summ.summary-article section */
+  .summary-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    margin: 1rem 1rem;
+    padding: 1rem;
+    background-color: beige;
+  
+    border: 0.5rem solid #e7b7b7;
+  }
+  
+  .summary-article > h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.6rem;
+    margin-top:1rem;
+  }
+  
+  .summary-article > p {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    height: 3rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .detail {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    gap:1rem;
+  }
+  
+  .detail i {
+    display: inline-block;
+    text-align: center;
+  
+    width: 1rem;
+    height: 1rem;
+  
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .summary-article span:nth-child(2), i:nth-child(1) {
+    color: blue;
+  }
+  .summary-article span:nth-child(4), i:nth-child(3) {
+    color: red;
+  }
+  
+  /* manage section */
+  .manage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .manage-date {
+    display: flex;
+    align-items: center;
+  
+    gap: 1rem;
+  
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .manage-date button {
+    font-size: 1rem;
+    border:0;
+  
+    background:#e7b7b7;
+  
+    cursor:pointer;
+  }
+  
+  .manage-list {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .manage-list header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding-left: 2rem;
+    padding-right: 2rem;
+  
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: beige;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  /* 체크박스 커스텀 */
+  label {
+    padding: 0.3rem 0.5rem;
+  
+    background-color: rgb(0, 0, 0);
+    color: #e7b7b7;
+    border: 1px solid #e7b7b7;
+  
+  }
+  
+  input:checked + label {
+    background-color: #e7b7b7;
+    color: rgb(9, 9, 9);
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    overflow-y: scroll;
+    padding: 1rem;
+    gap:1rem;
+    height: 35rem;
+  }
+  
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  
+    position: relative;
+    width:100%;
+    line-height: 4rem;
+  
+    border: 0.3rem solid #e7b7b7;
+    background-color: beige;
+  }
+  
+  .category {
+    width: 4rem;
+    font-size: 1.2rem;
+  }
+  
+  .discription {
+    margin-left: 1rem;
+  
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .outcome {
+    color: red;
+  }
+  
+  .income {
+    color: blue;
+  }
+  
+  .delete_list_button {
+    position: absolute;
+    right: 0;
+  
+    margin: 0.5rem;
+  
+    font-size: 1.3rem;
+  }
+  
+  /* 삭제 모달 */
+  .list-delete-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+  
+    padding: 2rem;
+  
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: beige;
+    border: 3px solid #e7b7b7; 
+  }
+  .modal button{
+    gap:1rem;
+  
+    font-size: 1rem;
+    font-weight: 400;
+  
+    background-color:#e7b7b7; 
+    color: black;
+  }
+  /* 추가 바텀시트 */
+  .add_list{
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add_list_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    height: 25rem;
+    overflow-y:scroll;
+    padding:3rem;
+  
+    position: fixed;
+    bottom: 0;
+    padding:0.5rem;
+    width: 80%;
+  
+    background-color:rgb(170, 214, 166);
+    border: 0.3rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+  
+  .add_list_content h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    margin:1rem;
+  }
+  
+  .unselected-button {
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+  
+    background-color: rgb(255, 255, 255);
+    border: 0;
+  
+    font-size: 1.2rem;
+    background-color:rgb(153, 146, 146);
+    color: rgb(255, 255, 255);
+  }
+  .selected-button {
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+  
+    background-color: rgb(255, 255, 255);
+    border: 0;
+  
+    font-size: 1.2rem;
+    background-color:#e7b7b7;
+    color: black;
+  }
+  
+  .add_list_content > form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .add_list_content > form > label {
+    background-color: rgba(255, 255, 255, 0);
+  
+    padding:0;
+    border:0;
+  
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .add_list_content > form > select,
+  .add_list_content > form > input {
+    display: block;
+  
+    width: 100%;
+    height: 2.5rem;
+  
+    font-size: 1.2rem;
+  
+    margin-bottom: 0.5rem;
+    border:0;
+  }
+  
+  .add_list_content > .add_save_btn {
+    width: 80%;
+  
+    padding: 0.5rem;
+    margin-top: 1rem;
+  
+    border: 0;
+  
+    font-size: 1.2rem;
+    background-color:#e7b7b7;
+    color: black;
+  }
+  
+  .add_list_content > .add_close_btn {
+    width: 80%;
+  
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+    border: 0;
+  
+    font-size: 1.2rem;
+    background-color: rgb(153, 146, 146);
+    color: white;
+  }
+  
+  /* footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+  
+    width: 100%;
+    padding: 0.4rem;
+    
+    background-color: palegoldenrod;
+    text-align: center;
+  }
+  
+  footer > button {
+    padding: 0.5rem;
+    border: 0;
+  
+    width: 4rem;
+  
+    font-size: 1.5rem;
+    font-weight: 400;
+  
+    background-color:#e7b7b7; 
+    color: black;
+  }
