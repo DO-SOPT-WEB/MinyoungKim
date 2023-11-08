@@ -9,6 +9,7 @@ import RamenFavorPage from "./components/RamenFavor";
 import ShowRandomPage from "./components/ShowRandom";
 import styled from "styled-components";
 import SobaFavorPage from "./components/SobaFavor";
+import GlobalStyle from "./styles/GlobalStyles";
 
 function App() {
   const[favorKey,setFavorKey] = useState(0);
@@ -52,7 +53,8 @@ function App() {
   }
   return (
     <>
-      <Header><h1>오늘의 점메추</h1></Header>
+      <GlobalStyle/>
+      <h1>오늘의 점메추</h1>
       {favorKey===0 && randomKey===0 &&<ChoosePage ChooseFavor={ChooseFavor} ChooseRandom={ChooseRandom}/>}
 
       {favorKey===1 &&<ChooseFavorPage FavorDetails={FavorDetails}/>}
@@ -61,7 +63,6 @@ function App() {
       {favorKey===4 &&<SoupDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey} selectYesSoup={selectYesSoup} selectNoSoup={selectNoSoup}/>}
       {favorKey===5 && yesNoSoup===1 &&<RamenFavorPage ResetFavorButton={ResetFavorButton}/>}
       {favorKey===5 && yesNoSoup===2 &&<SobaFavorPage ResetFavorButton={ResetFavorButton}/>}
-
 
       {randomKey===1 &&<ChooseRandomPage RandomDetails={RandomDetails}/>}
       {randomKey===2 &&<ShowRandomPage ResetRandomButton={ResetRandomButton}/>}
@@ -75,12 +76,3 @@ function App() {
 }
 
 export default App
-
-const Header=styled.main`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100vw;
-    background-color: lightblue; /* Add your desired background color */
-`

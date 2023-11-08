@@ -41,7 +41,7 @@ const ButtonContainer=styled.div`
     margin-top:1rem;
     margin-bottom: 1rem;
 `
-    const StartButton=styled.button`
+const StartButton=styled.button`
     display: flex;
     justify-content: center;
     align-items: center;

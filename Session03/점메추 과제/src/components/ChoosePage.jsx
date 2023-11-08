@@ -39,37 +39,37 @@ const ButtonContainer=styled.div`
     margin-bottom: 1rem;
 `
 const ChooseButton=styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  position: relative;
+    position: relative;
 
-  flex-grow: 1;
-  width: 15rem;
-  height: 15rem;
-  
-  border: none;
-  background-color: white; /* 기본 배경 색상 */
-  color: gray;
+    flex-grow: 1;
+    width: 15rem;
+    height: 15rem;
+    
+    border: none;
+    background-color: white; /* 기본 배경 색상 */
+    color: gray;
 
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 
-  font-size: 2rem;
+    font-size: 2rem;
 
-  transition-duration: 0.4s;
-  cursor: pointer;
+    transition-duration: 0.4s;
+    cursor: pointer;
 
-  &:hover {
-    background-color: pink; /* 호버 시 배경 색상 변화 */
-    color: black;
-    border: 2px solid black; 
-  }
-  &:focus {
-    outline: none;
-  }
+    &:hover {
+        background-color: pink; /* 호버 시 배경 색상 변화 */
+        color: black;
+        border: 2px solid black; 
+    }
+    &:focus {
+        outline: none;
+    }
 
 `;
 
