@@ -49,16 +49,19 @@ const StartButton=styled.button`
     position: relative;
 
     flex-grow: 1;
-    
+
+    width: 15rem;
+    height: 15rem;
+
     border: none;
-    background-color: gray; /* 기본 배경 색상 */
-    color: white;
+    background-color: white; /* 기본 배경 색상 */
+    color: gray;
 
     text-align: center;
     text-decoration: none;
     display: inline-block;
 
-    font-size: 1rem;
+    font-size: 2rem;
 
     transition-duration: 0.4s;
     cursor: pointer;
