@@ -43,7 +43,7 @@ const ShowRandomPage = ({ ResetRandomButton }) => {
               <h2>{time}</h2>
             ) : (
               <>
-                <h2>오늘의 추천음식은 바로 {imageName}!</h2>
+                <h2>오늘의 추천음식은 바로 {imageName} **</h2>
                 <ImageContainer>
                   <img src={image} alt={imageName} />
                 </ImageContainer>

@@ -8,7 +8,7 @@ const SobaFavorPage = ({ ResetFavorButton }) => {
       <ThemeProvider theme={theme}>
         <Container>
           <div>
-            <h2>오늘의 추천음식은 바로 소바!</h2>
+            <h2>오늘의 추천음식은 바로 소바 **</h2>
             <ImageContainer>
               <img src={SobaImage} alt="soba_image" />
             </ImageContainer>

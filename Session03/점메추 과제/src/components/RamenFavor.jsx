@@ -8,7 +8,7 @@ const RamenFavorPage = ({ ResetFavorButton }) => {
       <ThemeProvider theme={theme}>
         <Container>
           <div>
-            <h2>오늘의 추천음식은 바로 라멘!</h2>
+            <h2>오늘의 추천음식은 바로 라멘 **</h2>
             <ImageContainer>
               <img src={RamenImage} alt="ramen_image" />
             </ImageContainer>
