@@ -4,6 +4,12 @@ import SobaImage from '../assets/soba.jpg'
 import RamenImage from '../assets/ramen.jpg'
 import UdonImage from '../assets/udon.jpg'
 
+const imageData = [
+    {id:1, name:'소바', src: SobaImage},
+    {id:2, name:'라멘', src: RamenImage},
+    {id:3, name:'우동', src: UdonImage}
+];
+
 const ShowRandomPage = ({ ResetRandomButton }) => {
   const [time, setTime] = useState(3);
   const [image, setImage] = useState(null);
@@ -13,11 +19,9 @@ const ShowRandomPage = ({ ResetRandomButton }) => {
     if (time > 0) {
       setTimeout(() => setTime(time - 1), 1000);
     } else {
-      const imageArray = [SobaImage, RamenImage, UdonImage];
-      const imageNames = ['소바', '라멘', '우동'];
-      const imageNum = Math.floor(Math.random() * imageArray.length);
-      setImage(imageArray[imageNum]);
-      setImageName(imageNames[imageNum]);
+      const imageNum = Math.floor(Math.random() * imageData.length);
+      setImage(imageData[imageNum].src);
+      setImageName(imageData[imageNum].name);
     }
   }, [time]);
 
