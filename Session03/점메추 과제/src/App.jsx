@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <h1>오늘의 점메추</h1>
+      <h1>오늘의 점심 메뉴를 추천합니다 '-'</h1>
       {favorKey===0 && randomKey===0 &&<ChoosePage ChooseFavor={ChooseFavor} ChooseRandom={ChooseRandom}/>}
 
       {favorKey===1 &&<ChooseFavorPage FavorDetails={FavorDetails}/>}

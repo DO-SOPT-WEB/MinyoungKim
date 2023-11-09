@@ -22,7 +22,16 @@ const GlobalStyles = createGlobalStyle`
         font-weight:800;
     }
     h2{
-        line-height:2;
+        line-height:1;
+        font-weight:500;
+        margin-top:3rem;
+    }
+    button{
+        margin-left:3rem;
+        margin-right:3rem;
+
+        margin-top:2rem;
+        margin-bottom:3rem;
     }
 
     div, span, h3, h4, h5, h6, p, 
@@ -35,7 +44,6 @@ const GlobalStyles = createGlobalStyle`
     }
     body{
         font-family: "고딕", sans-serif;
-
         margin-bottom: 100px;
     }
 `;

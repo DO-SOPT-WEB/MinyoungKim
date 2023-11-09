@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "../styles/theme";
 import { useState } from "react";
 
 const SoupDetailsPage = ({
@@ -22,139 +23,102 @@ const SoupDetailsPage = ({
   };
 
   return (
-    <Container>
-      <div>
-        <h2>마지막으로 골라줘</h2>
+    <>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <div>
+            <h2>마지막으로 골라줘</h2>
 
-        <ButtonContainer>
-          <YesSoupButton type="button" onClick={YesSoup} soup={soup}>
-            <p>국물 있음</p>
-          </YesSoupButton>
-          <NoSoupButton type="button" onClick={NoSoup} soup={soup}>
-            <p>국물 없음</p>
-          </NoSoupButton>
-        </ButtonContainer>
+            <ButtonContainer>
+              <YesSoupButton type="button" onClick={YesSoup} soup={soup}>
+                <p>국물 있음</p>
+              </YesSoupButton>
+              <NoSoupButton type="button" onClick={NoSoup} soup={soup}>
+                <p>국물 없음</p>
+              </NoSoupButton>
+            </ButtonContainer>
 
-        <ButtonContainer>
-          <BackButton type="button" onClick={BackButtonKey}>
-            이전으로
-          </BackButton>
-          <ForthButton
-            disabled={!isSoupSelected}
-            onClick={ForthButtonKey}
-            isSoupSelected={isSoupSelected}
-          >
-            결과보기
-          </ForthButton>
-        </ButtonContainer>
-      </div>
-    </Container>
+            <ButtonContainer>
+              <BackButton type="button" onClick={BackButtonKey}>
+                이전으로
+              </BackButton>
+              <ForthButton
+                disabled={!isSoupSelected}
+                onClick={ForthButtonKey}
+                isSoupSelected={isSoupSelected}
+              >
+                결과보기
+              </ForthButton>
+            </ButtonContainer>
+          </div>
+        </Container>
+      </ThemeProvider>
+    </>
   );
 };
 
 export default SoupDetailsPage;
 
 const Container = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 100vw;
-
-  background-color: palegoldenrod;
+  ${({ theme }) => theme.common.Container};
+  background-color : ${({ theme }) => theme.colors.favYellow};
 `;
 const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 1rem;
-  padding: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  ${({ theme }) => theme.common.ButtonContainer};
 `;
 
 const YesSoupButton = styled.button`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-
-  flex-grow: 1;
+  ${({ theme }) => theme.common.Button};
 
   width: 5rem;
-  height: 5rem;
+  height: 8rem;
 
   background-color: ${(props) => (props.soup === 1 ? "pink" : "initial")};
+  
   & > p {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.fontSizes.DetailsFont};
   }
   &:hover {
-    background-color: pink;
-    color: black;
-    border: 2px solid black;
+    ${({ theme }) => theme.common.HoverButton};
   }
 `;
 
 const NoSoupButton = styled.button`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-
-  flex-grow: 1;
+  ${({ theme }) => theme.common.Button};
 
   width: 5rem;
-  height: 5rem;
+  height: 8rem;
 
   background-color: ${(props) => (props.soup === 2 ? "pink" : "initial")};
+  
   & > p {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.fontSizes.DetailsFont};
   }
   &:hover {
-    background-color: pink;
-    color: black;
-    border: 2px solid black;
+    ${({ theme }) => theme.common.HoverButton};
   }
 `;
 
 const BackButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
-
-  flex-grow: 1;
+  ${({ theme }) => theme.common.Button};
 
   border: 2px solid black;
-  background-color: pink;
-  color: black;
 
-  text-align: center;
-  text-decoration: none;
+  background-color: ${({ theme }) => theme.colors.pink};
+  color: ${({ theme }) => theme.colors.black};
+  font-size: ${({ theme }) => theme.fontSizes.BackForthFont};
 
-  display: inline-block;
-
-  font-size: 1rem;
   transition-duration: 0.4s;
 
   cursor: pointer;
+
   &:focus {
     outline: none;
   }
 `;
 
 const ForthButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  flex-grow: 1;
+  ${({ theme }) => theme.common.Button};
 
   border: none;
 
@@ -162,12 +126,10 @@ const ForthButton = styled.button`
   color: ${(props) => (props.isSoupSelected ? "black" : "gray")};
   border: ${(props) => (props.isSoupSelected ? "2px solid black" : "gray")};
 
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.fontSizes.BackForthFont};
 
   cursor: pointer;
+  
   &:focus {
     outline: none;
   }
