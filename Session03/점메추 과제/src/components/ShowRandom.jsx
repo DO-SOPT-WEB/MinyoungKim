@@ -4,11 +4,19 @@ import { useState, useEffect } from "react";
 import SobaImage from "../assets/soba.jpg";
 import RamenImage from "../assets/ramen.jpg";
 import UdonImage from "../assets/udon.jpg";
+import ChipotleImage from "../assets/chipotle.jpg";
+import DosirakImage from "../assets/dosirak.jpg";
+import FriesImage from "../assets/fries.jpg";
+import PizzaImage from "../assets/pizza.jpg";
 
 const imageData = [
-  { id: 1, name: "소바", src: SobaImage },
-  { id: 2, name: "라멘", src: RamenImage },
-  { id: 3, name: "우동", src: UdonImage },
+  { id: 1, name: "Soba", src: SobaImage },
+  { id: 2, name: "Ramen", src: RamenImage },
+  { id: 3, name: "Udon", src: UdonImage },
+  { id: 4, name: "Chipotle", src: ChipotleImage},
+  { id: 5, name: "신칸센 도시락", src: DosirakImage},
+  { id: 6, name: "Fries", src: FriesImage},
+  { id: 7, name: "Pizza", src: PizzaImage}
 ];
 
 const ShowRandomPage = ({ ResetRandomButton }) => {
