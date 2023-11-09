@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider} from "styled-components";
 const colors={
   favYellow :"#eee8aa",
   white : "#ffff",
@@ -12,6 +12,7 @@ const fontSizes ={
   DetailsFont: pixelToRem(40),
   BackForthFont: pixelToRem(30),
 }
+
 
 const common ={
   Container:`
@@ -50,9 +51,6 @@ const common ={
     color: black;
     border: 2px solid black;
   `,
-  BackButton:`
-    
-  `
 }
 const theme ={
   fontSizes,

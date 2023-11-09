@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider, keyframes } from "styled-components";
 import theme from "../styles/theme";
 import { useState, useEffect } from "react";
 import SobaImage from "../assets/soba.jpg";
@@ -40,7 +40,7 @@ const ShowRandomPage = ({ ResetRandomButton }) => {
         <Container>
           <RandomContainer>
             {time ? (
-              <h2>{time}</h2>
+              <CountDown>{time}</CountDown>
             ) : (
               <>
                 <h2>오늘의 추천음식은 바로 {imageName} **</h2>
@@ -71,6 +71,29 @@ const RandomContainer = styled.main`
   ${({ theme }) => theme.common.Container};
 `;
 
+const TimerAnimation = keyframes`
+  0% {
+    transform: scale(10);
+    opacity: 1;
+    color: white;
+  }
+
+  100% {
+    transform: scale(10);
+    opacity: 1;
+    color: #db6060; 
+  }
+`;
+
+const CountDown = styled.h2` 
+  animation: ${TimerAnimation} 1s linear infinite;
+  height:20rem;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  font-weight: 800;
+`
 const ResetButton = styled.button`
   ${({ theme }) => theme.common.Button};
 
