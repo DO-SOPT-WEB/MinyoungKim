@@ -6,7 +6,7 @@ const FavorDetailsPage = ({ BackButtonKey, ForthButtonKey }) => {
   const [isFoodSelected, setIsFoodSelected] = useState(false);
 
   const KrFood = () => {
-    setFood(1);
+		setFood(1);
     setIsFoodSelected(true);
   };
   const JpnFood = () => {

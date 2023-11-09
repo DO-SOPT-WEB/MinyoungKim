@@ -11,22 +11,22 @@ const imageData = [
 ];
 
 const ShowRandomPage = ({ ResetRandomButton }) => {
-  const [time, setTime] = useState(3);
-  const [image, setImage] = useState(null);
-  const [imageName, setImageName] = useState('');
+    const [time, setTime] = useState(3);
+    const [image, setImage] = useState(null);
+    const [imageName, setImageName] = useState('');
 
-  useEffect(() => {
-    if (time > 0) {
-      setTimeout(() => setTime(time - 1), 1000);
-    } else {
-      const imageNum = Math.floor(Math.random() * imageData.length);
-      setImage(imageData[imageNum].src);
-      setImageName(imageData[imageNum].name);
-    }
-  }, [time]);
+    useEffect(() => {
+      if (time > 0) {
+        setTimeout(() => setTime(time - 1), 1000);
+      } else {
+        const imageNum = Math.floor(Math.random() * imageData.length);
+        setImage(imageData[imageNum].src);
+        setImageName(imageData[imageNum].name);
+      }
+    }, [time]);
 
-  return (
-    <Container>
+    return (
+      <Container>
       <RandomContainer>
         {time ? (
           <h2>{time}</h2>
