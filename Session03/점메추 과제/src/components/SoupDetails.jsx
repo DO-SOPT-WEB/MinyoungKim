@@ -2,38 +2,30 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import { useState } from "react";
 
-const SoupDetailsPage = ({
-  BackButtonKey,
-  ForthButtonKey,
-  selectYesSoup,
-  selectNoSoup,
-}) => {
-  const [soup, setSoup] = useState(0);
-  const [isSoupSelected, setIsSoupSelected] = useState(false);
-
-  const YesSoup = () => {
+const SoupDetailsPage = ({BackButtonKey, ForthButtonKey, YesSoup, NoSoup}) => {
+  const [isSoupSelected, setIsSoupSelected]=useState(false);
+  const [soup, setSoup] = useState(10);
+  const handleYesSoup =()=>{
+    setSoup(0);
+    YesSoup();
+    setIsSoupSelected(true);
+  }
+  const handleNoSoup=()=>{
     setSoup(1);
+    NoSoup();
     setIsSoupSelected(true);
-    selectYesSoup(1);
-  };
-  const NoSoup = () => {
-    setSoup(2);
-    setIsSoupSelected(true);
-    selectNoSoup(2);
-  };
-
+  }
   return (
     <>
       <ThemeProvider theme={theme}>
         <Container>
           <div>
             <h2>마지막으로 골라줘</h2>
-
             <ButtonContainer>
-              <YesSoupButton type="button" onClick={YesSoup} soup={soup}>
+              <YesSoupButton type="button" onClick={handleYesSoup} soup={soup}>
                 <p>국물 있음</p>
               </YesSoupButton>
-              <NoSoupButton type="button" onClick={NoSoup} soup={soup}>
+              <NoSoupButton type="button" onClick={handleNoSoup} soup={soup}>
                 <p>국물 없음</p>
               </NoSoupButton>
             </ButtonContainer>
@@ -42,11 +34,7 @@ const SoupDetailsPage = ({
               <BackButton type="button" onClick={BackButtonKey}>
                 이전으로
               </BackButton>
-              <ForthButton
-                disabled={!isSoupSelected}
-                onClick={ForthButtonKey}
-                isSoupSelected={isSoupSelected}
-              >
+              <ForthButton disabled={!isSoupSelected} onClick={ForthButtonKey} isSoupSelected={isSoupSelected}>
                 결과보기
               </ForthButton>
             </ButtonContainer>
@@ -73,7 +61,7 @@ const YesSoupButton = styled.button`
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.soup === 1 ? "pink" : "initial")};
+  background-color: ${(props) => (props.soup === 0 ? "pink" : "initial")};
   
   & > p {
     font-size: ${({ theme }) => theme.fontSizes.DetailsFont};
@@ -89,7 +77,7 @@ const NoSoupButton = styled.button`
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.soup === 2 ? "pink" : "initial")};
+  background-color: ${(props) => (props.soup === 1 ? "pink" : "initial")};
   
   & > p {
     font-size: ${({ theme }) => theme.fontSizes.DetailsFont};

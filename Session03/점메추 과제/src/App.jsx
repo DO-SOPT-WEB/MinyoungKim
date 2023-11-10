@@ -5,11 +5,10 @@ import ChooseRandomPage from "./components/ChooseRandom"
 import FavorDetailsPage from "./components/FavorDetails";
 import DishDetailsPage from "./components/DishDetails";
 import SoupDetailsPage from "./components/SoupDetails";
-import RamenFavorPage from "./components/RamenFavor";
-import ShowRandomPage from "./components/ShowRandom";
+import ShowFavorPage from "./components/ShowFavor";
 import styled from "styled-components";
-import SobaFavorPage from "./components/SobaFavor";
 import GlobalStyle from "./styles/GlobalStyles";
+import ShowRandomPage from "./components/ShowRandom";
 
 function App() {
   const[favorKey,setFavorKey] = useState(0);
@@ -38,19 +37,40 @@ function App() {
   const RandomDetails=()=>{
     setRandomKey(2);
   }
-
   const ResetRandomButton=()=>{
     setRandomKey(1);
   }
 
-  const[yesNoSoup, setYesNoSoup]=useState(0);
+  const [favor, setFavor]=useState(10);
+  const KrFavor=()=>{
+    setFavor(0);
+  }
+  const JpnFavor=()=>{
+    setFavor(1);
+  }
+  const UsFavor=()=>{
+    setFavor(2);
+  }
 
-  const selectYesSoup=()=>{
-    setYesNoSoup(1);
+  const [dish, setDish]=useState(10);
+  const RiceDish=()=>{
+    setDish(0);
   }
-  const selectNoSoup=()=>{
-    setYesNoSoup(2);
+  const NoodleDish=()=>{
+    setDish(1);
   }
+  const MeatFishDish=()=>{
+    setDish(2);
+  }
+
+  const [soup, setSoup]=useState(10);
+  const YesSoup=()=>{
+    setSoup(0);
+  }
+  const NoSoup=()=>{
+    setSoup(1);
+  }
+  
   return (
     <>
       <GlobalStyle/>
@@ -58,11 +78,10 @@ function App() {
       {favorKey===0 && randomKey===0 &&<ChoosePage ChooseFavor={ChooseFavor} ChooseRandom={ChooseRandom}/>}
 
       {favorKey===1 &&<ChooseFavorPage FavorDetails={FavorDetails}/>}
-      {favorKey===2 &&<FavorDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey}/>}
-      {favorKey===3 &&<DishDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey}/>}
-      {favorKey===4 &&<SoupDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey} selectYesSoup={selectYesSoup} selectNoSoup={selectNoSoup}/>}
-      {favorKey===5 && yesNoSoup===1 &&<RamenFavorPage ResetFavorButton={ResetFavorButton}/>}
-      {favorKey===5 && yesNoSoup===2 &&<SobaFavorPage ResetFavorButton={ResetFavorButton}/>}
+      {favorKey===2 &&<FavorDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey} KrFavor={KrFavor} JpnFavor={JpnFavor} UsFavor={UsFavor}/>}
+      {favorKey===3 &&<DishDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey} RiceDish={RiceDish} NoodleDish={NoodleDish} MeatFishDish={MeatFishDish}/>}
+      {favorKey===4 &&<SoupDetailsPage BackButtonKey={BackButtonKey} ForthButtonKey={ForthButtonKey} YesSoup={YesSoup} NoSoup={NoSoup}/>}
+      {favorKey===5 &&<ShowFavorPage ResetFavorButton={ResetFavorButton} selectedFavor={favor} selectedDish={dish} selectedSoup={soup}/>}
 
       {randomKey===1 &&<ChooseRandomPage RandomDetails={RandomDetails}/>}
       {randomKey===2 &&<ShowRandomPage ResetRandomButton={ResetRandomButton}/>}

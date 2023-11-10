@@ -3,20 +3,23 @@ import theme from "../styles/theme";
 
 import { useState } from "react";
 
-const DishDetailsPage = ({ BackButtonKey, ForthButtonKey }) => {
-  const [dish, setDish] = useState(0);
+const DishDetailsPage = ({ BackButtonKey, ForthButtonKey, RiceDish, NoodleDish, MeatFishDish }) => {
+  const [dish, setDish] = useState(10);
   const [isDishSelected, setIsDishSelected] = useState(false);
-
-  const RiceDish = () => {
+  
+  const handleRiceDish = () => {
+    setDish(0);
+    RiceDish();
+    setIsDishSelected(true);
+  };
+  const handleNoodleDish = () => {
     setDish(1);
+    NoodleDish();
     setIsDishSelected(true);
   };
-  const NoodleDish = () => {
+  const handleMeatFishDish = () => {
     setDish(2);
-    setIsDishSelected(true);
-  };
-  const MeatFishDish = () => {
-    setDish(3);
+    MeatFishDish();
     setIsDishSelected(true);
   };
 
@@ -27,13 +30,13 @@ const DishDetailsPage = ({ BackButtonKey, ForthButtonKey }) => {
           <div>
             <h2>그럼 이중에는 뭐가 끌려?</h2>
             <ButtonContainer>
-              <RiceDishButton type="button" onClick={RiceDish} dish={dish}>
+              <RiceDishButton type="button" onClick={handleRiceDish} dish={dish}>
                 <p>밥</p>
               </RiceDishButton>
-              <NoodleDishButton type="button" onClick={NoodleDish} dish={dish}>
+              <NoodleDishButton type="button" onClick={handleNoodleDish} dish={dish}>
                 <p>면</p>
               </NoodleDishButton>
-              <MeatFishDishButton type="button" onClick={MeatFishDish} dish={dish}>
+              <MeatFishDishButton type="button" onClick={handleMeatFishDish} dish={dish}>
                 <p>고기or해물</p>
               </MeatFishDishButton>
             </ButtonContainer>
@@ -67,7 +70,7 @@ const RiceDishButton = styled.button`
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.dish === 1 ? "pink" : "initial")};
+  background-color: ${(props) => (props.dish === 0 ? "pink" : "initial")};
 
   & > p {
     font-size: ${({ theme }) => theme.fontSizes.DetailsFont};
@@ -83,7 +86,7 @@ const NoodleDishButton = styled.button`
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.dish === 2 ? "pink" : "initial")};
+  background-color: ${(props) => (props.dish === 1 ? "pink" : "initial")};
 
   & > p {
     font-size: ${({ theme }) => theme.fontSizes.DetailsFont};
@@ -99,7 +102,7 @@ const MeatFishDishButton = styled.button`
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.dish === 3 ? "pink" : "initial")};
+  background-color: ${(props) => (props.dish === 2 ? "pink" : "initial")};
 
   & > p {
     font-size: ${({ theme }) => theme.fontSizes.DetailsFont};

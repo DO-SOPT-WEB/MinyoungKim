@@ -2,21 +2,24 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import { useState } from "react";
 
-const FavorDetailsPage = ({ BackButtonKey, ForthButtonKey }) => {
-  const [food, setFood] = useState(0);
-  const [isFoodSelected, setIsFoodSelected] = useState(false);
+const FavorDetailsPage = ({ BackButtonKey, ForthButtonKey, KrFavor, JpnFavor, UsFavor }) => {
+  const [favor, setFavor] = useState(10);
+  const [isFavorSelected, setIsFavorSelected] = useState(false);
 
-  const KrFood = () => {
-    setFood(1);
-    setIsFoodSelected(true);
+  const handleKrFavor = () => {
+    setFavor(0);
+    KrFavor();
+    setIsFavorSelected(true);
   };
-  const JpnFood = () => {
-    setFood(2);
-    setIsFoodSelected(true);
+  const handleJpnFavor = () => {
+    setFavor(1);
+    JpnFavor();
+    setIsFavorSelected(true);
   };
-  const ChnFood = () => {
-    setFood(3);
-    setIsFoodSelected(true);
+  const handleUsFavor = () => {
+    setFavor(2);
+    UsFavor();
+    setIsFavorSelected(true);
   };
 
   return (
@@ -27,15 +30,15 @@ const FavorDetailsPage = ({ BackButtonKey, ForthButtonKey }) => {
             <h2>오늘은 어떤 종류가 먹고 싶어?</h2>
 
             <ButtonContainer>
-              <KrFoodButton type="button" onClick={KrFood} food={food}>
+              <KrFavorButton type="button" onClick={handleKrFavor} favor={favor}>
                 <p>한식</p>
-              </KrFoodButton>
-              <JpnFoodButton type="button" onClick={JpnFood} food={food}>
+              </KrFavorButton>
+              <JpnFavorButton type="button" onClick={handleJpnFavor} favor={favor}>
                 <p>일식</p>
-              </JpnFoodButton>
-              <ChnFoodButton type="button" onClick={ChnFood} food={food}>
-                <p>중식</p>
-              </ChnFoodButton>
+              </JpnFavorButton>
+              <UsFavorButton type="button" onClick={handleUsFavor} favor={favor}>
+                <p>양식</p>
+              </UsFavorButton>
             </ButtonContainer>
 
             <ButtonContainer>
@@ -43,9 +46,9 @@ const FavorDetailsPage = ({ BackButtonKey, ForthButtonKey }) => {
                 이전으로
               </BackButton>
               <ForthButton
-                disabled={!isFoodSelected}
+                disabled={!isFavorSelected}
                 onClick={ForthButtonKey}
-                isFoodSelected={isFoodSelected}
+                isFavorSelected={isFavorSelected}
               >
                 다음으로
               </ForthButton>
@@ -68,13 +71,13 @@ const ButtonContainer = styled.div`
   ${({ theme }) => theme.common.ButtonContainer};
 `;
 
-const KrFoodButton = styled.button`
+const KrFavorButton = styled.button`
   ${({ theme }) => theme.common.Button};
 
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.food === 1 ? "pink" : "initial")};
+  background-color: ${(props) => (props.favor === 0 ? "pink" : "initial")};
 
   &:hover {
     ${({ theme }) => theme.common.HoverButton};
@@ -85,13 +88,13 @@ const KrFoodButton = styled.button`
   }
 `;
 
-const JpnFoodButton = styled.button`
+const JpnFavorButton = styled.button`
   ${({ theme }) => theme.common.Button};
   
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.food === 2 ? "pink" : "initial")};
+  background-color: ${(props) => (props.favor === 1 ? "pink" : "initial")};
 
   &:hover {
     ${({ theme }) => theme.common.HoverButton};
@@ -101,13 +104,13 @@ const JpnFoodButton = styled.button`
   }
 `;
 
-const ChnFoodButton = styled.button`
+const UsFavorButton = styled.button`
   ${({ theme }) => theme.common.Button};
 
   width: 5rem;
   height: 8rem;
 
-  background-color: ${(props) => (props.food === 3 ? "pink" : "initial")};
+  background-color: ${(props) => (props.favor === 2 ? "pink" : "initial")};
 
   &:hover {
     ${({ theme }) => theme.common.HoverButton};
@@ -140,9 +143,9 @@ const ForthButton = styled.button`
 
   border: none;
 
-  background-color: ${(props) => (props.isFoodSelected ? "pink" : "white")};
-  color: ${(props) => (props.isFoodSelected ? "black" : "gray")};
-  border: ${(props) => (props.isFoodSelected ? "2px solid black" : "gray")};
+  background-color: ${(props) => (props.isFavorSelected ? "pink" : "white")};
+  color: ${(props) => (props.isFavorSelected ? "black" : "gray")};
+  border: ${(props) => (props.isFavorSelected ? "2px solid black" : "gray")};
 
   font-size: ${({ theme }) => theme.fontSizes.BackForthFont};
 
