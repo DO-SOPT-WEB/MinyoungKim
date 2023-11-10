@@ -1,23 +1,7 @@
 import styled, { ThemeProvider, keyframes } from "styled-components";
 import theme from "../styles/theme";
 import { useState, useEffect } from "react";
-import SobaImage from "../assets/soba.jpg";
-import RamenImage from "../assets/ramen.jpg";
-import UdonImage from "../assets/udon.jpg";
-import ChipotleImage from "../assets/chipotle.jpg";
-import DosirakImage from "../assets/dosirak.jpg";
-import FriesImage from "../assets/fries.jpg";
-import PizzaImage from "../assets/pizza.jpg";
-
-const imageData = [
-  { id: 1, name: "Soba", src: SobaImage },
-  { id: 2, name: "Ramen", src: RamenImage },
-  { id: 3, name: "Udon", src: UdonImage },
-  { id: 4, name: "Chipotle", src: ChipotleImage},
-  { id: 5, name: "신칸센 도시락", src: DosirakImage},
-  { id: 6, name: "Fries", src: FriesImage},
-  { id: 7, name: "Pizza", src: PizzaImage}
-];
+import IMAGE_DATA from "../data/imgData";
 
 const ShowRandomPage = ({ ResetRandomButton }) => {
   const [time, setTime] = useState(3);
@@ -28,9 +12,9 @@ const ShowRandomPage = ({ ResetRandomButton }) => {
     if (time > 0) {
       setTimeout(() => setTime(time - 1), 1000);
     } else {
-      const imageNum = Math.floor(Math.random() * imageData.length);
-      setImage(imageData[imageNum].src);
-      setImageName(imageData[imageNum].name);
+      const imageNum = Math.floor(Math.random() * IMAGE_DATA.length);
+      setImage(IMAGE_DATA[imageNum].src);
+      setImageName(IMAGE_DATA[imageNum].name);
     }
   }, [time]);
 
