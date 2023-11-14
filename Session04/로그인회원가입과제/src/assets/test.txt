@@ -1,0 +1,23 @@
+axios 로그인 페이지 
+
+{
+    "username": "unand",
+    "password": "1234"
+}
+
+axios 회원가입 페이지
+{
+    "username": "unand", //아이디
+    "nickname": "유난", //터혀니
+    "password": "1234"
+}
+const formData = new FormData(); //
+
+axios({
+  method:'post', 
+  url: 'http://3.39.54.196/api/v1/members/sign-in', 
+  data: {
+
+  }
+
+})
