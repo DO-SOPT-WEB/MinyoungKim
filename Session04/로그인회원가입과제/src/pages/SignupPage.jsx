@@ -3,23 +3,20 @@ import Header from "../common/Header";
 import * as M from "../common/MainContainerStyle";
 import * as F from "../common/FormContainerStyle";
 import * as B from "../common/ButtonContainerStyle";
+import SignUpBtn from "../components/SignUpBtn";
 //import { Link } from "react-router-dom";
 import apiClient from '../api/axios';
 import TextField from "../components/TextField";
-import {useNavigate} from "react-router-dom";
+import DupChkBtn from "../components/DupChkBtn";
+import styled from "styled-components";
 
 const SignupPage = () => {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
-  const [checkPassword, setCheckPassword] = useState("");
-  const [nickname, setNickname] = useState(""); 
-  const navigate = useNavigate();
+  const [id, setId] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [checkPassword, setCheckPassword] = useState(null);
+  const [nickname, setNickname] = useState(null); 
 
   const [btnState, setBtnState] = useState(false);
-
-  const handleClickButton = () => {
-    navigate('/login');
-  }
 
   useEffect(
     ()=>{    
@@ -28,9 +25,9 @@ const SignupPage = () => {
       if(checkPassword === password){
         setBtnState(true);
       }
-    },
-    [checkPassword,password], //변경이 있으면 useEffect가 실행된다
-  )
+    },[checkPassword,password] //변경이 있으면 useEffect가 실행된다
+  );
+
   // Request API.
   const signUp = async() =>{
     try{
@@ -61,6 +58,7 @@ const SignupPage = () => {
               setId(event.target.value);
             }}
           />
+          <DupChkBtn/>
           <TextField
             label = "비밀번호"
             placeholder="비밀번호를 입력해주세요"
@@ -85,12 +83,8 @@ const SignupPage = () => {
               setNickname(event.target.value);
             }}
           />
-          <br/>
           <B.ButtonContainer>
-            <button type="button" disabled={!btnState} onClick={()=>{
-              signUp();
-              handleClickButton;
-            }}>회원가입</button>
+            <SignUpBtn id={id} password={password} nickname={nickname} signUp={signUp}/>
           </B.ButtonContainer>
         </form>
       </F.FormContainer>
