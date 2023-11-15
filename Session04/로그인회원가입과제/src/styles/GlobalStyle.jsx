@@ -13,6 +13,17 @@ html {
 
 button {
     cursor: pointer;
+    background-color: black;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 0;
+
+    &:hover {
+      background-color: white;
+      color: purple;
+      border: 2px solid black;
+    }
 }
 
 * {
