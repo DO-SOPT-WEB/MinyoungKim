@@ -15,7 +15,8 @@ const SignupPage = () => {
   const [password, setPassword] = useState(null);
   const [checkPassword, setCheckPassword] = useState(null);
   const [nickname, setNickname] = useState(null); 
-
+  const [isChecked, setIsChecked] =useState(null);
+  
   const [btnState, setBtnState] = useState(false);
 
   useEffect(
@@ -27,7 +28,6 @@ const SignupPage = () => {
       }
     },[checkPassword,password] //변경이 있으면 useEffect가 실행된다
   );
-
   // Request API.
   const signUp = async() =>{
     try{
@@ -39,6 +39,21 @@ const SignupPage = () => {
       );
       //받아올 때까지 기다린 다음 성공 올림
       console.log('성공', response.data);
+    }catch(err){
+      console.log(err.message);
+      console.log(err.response);
+    }
+  }
+  const dupCheck = async() =>{
+    try{ 
+      const response = await apiClient.get(`${import.meta.env.VITE_API}/api/v1/members/check`, {
+        params: {
+          username: id 
+        }
+      },
+      );
+      setIsChecked(response.data.isExist); 
+      console.log('성공',response.data); 
     }catch(err){
       console.log(err.message);
       console.log(err.response);
@@ -58,7 +73,7 @@ const SignupPage = () => {
               setId(event.target.value);
             }}
           />
-          <DupChkBtn/>
+          <DupChkBtn dupCheck={dupCheck} isChecked={isChecked}/>
           <TextField
             label = "비밀번호"
             placeholder="비밀번호를 입력해주세요"
@@ -84,7 +99,7 @@ const SignupPage = () => {
             }}
           />
           <B.ButtonContainer>
-            <SignUpBtn id={id} password={password} nickname={nickname} signUp={signUp}/>
+            <SignUpBtn id={id} password={password} nickname={nickname} isChecked={isChecked} signUp={signUp}/>
           </B.ButtonContainer>
         </form>
       </F.FormContainer>
