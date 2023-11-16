@@ -8,7 +8,7 @@ const SignUpBtn = (btnProps) => {
   const handleClickButton = () => {
     navigate('/login');
   }
-  return id!==null&& password!==null && nickname!==null && checkPassword!==null && password===checkPassword && isChecked!==true?(
+  return id!==null&& password!==null && nickname!==null && checkPassword!==null && password===checkPassword && isChecked===false?(
     <SignUpBtnWrapper
       type="button"
       onClick={()=>{
