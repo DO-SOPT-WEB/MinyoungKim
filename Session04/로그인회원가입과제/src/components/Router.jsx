@@ -4,7 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
 
 import MyPage from "../pages/MyPage";
-import myImage from "../assets/selfie.jpg"
+
 const Router = () => {
   return (
     <BrowserRouter>
@@ -12,7 +12,7 @@ const Router = () => {
         <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/mypage/:userId" element={<MyPage myImage={myImage}/>}/>
+        <Route path="/mypage/:userId" element={<MyPage />}/>
       </Routes>
     </BrowserRouter>
   );
