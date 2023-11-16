@@ -8,7 +8,6 @@ import SignUpBtn from "../components/SignUpBtn";
 import apiClient from '../api/axios';
 import TextField from "../components/TextField";
 import DupChkBtn from "../components/DupChkBtn";
-import styled from "styled-components";
 
 const SignupPage = () => {
   const [id, setId] = useState(null);
@@ -16,18 +15,17 @@ const SignupPage = () => {
   const [checkPassword, setCheckPassword] = useState(null);
   const [nickname, setNickname] = useState(null); 
   const [isChecked, setIsChecked] =useState(null);
-  
-  const [btnState, setBtnState] = useState(false);
+
+  const [btnState, setBtnState] = useState(null);
 
   useEffect(
     ()=>{    
-      console.log(checkPassword);
-      console.log(password);
       if(checkPassword === password){
         setBtnState(true);
       }
     },[checkPassword,password] //변경이 있으면 useEffect가 실행된다
   );
+  
   // Request API.
   const signUp = async() =>{
     try{
@@ -85,7 +83,7 @@ const SignupPage = () => {
           <TextField
             label = "비밀번호 확인"
             placeholder="비밀번호를 한번 더 입력해주세요"
-            value={checkPassword}
+            value={checkPassword} 
             onChange={(event) => {
               setCheckPassword(event.target.value);
             }}
@@ -99,7 +97,7 @@ const SignupPage = () => {
             }}
           />
           <B.ButtonContainer>
-            <SignUpBtn id={id} password={password} nickname={nickname} isChecked={isChecked} signUp={signUp}/>
+            <SignUpBtn id={id} password={password} nickname={nickname} isChecked={isChecked} checkPassword={checkPassword} signUp={signUp}/>
           </B.ButtonContainer>
         </form>
       </F.FormContainer>

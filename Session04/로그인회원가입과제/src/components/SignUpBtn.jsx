@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
 
 const SignUpBtn = (btnProps) => {
-  const {id, password, nickname, signUp,isChecked} = btnProps;
+  const {id, password, nickname, signUp,isChecked,checkPassword} = btnProps;
   const navigate = useNavigate();
   const handleClickButton = () => {
     navigate('/login');
   }
-  return id!==null&& password!==null && nickname!==null && isChecked!==null && isChecked!==true ?(
+  return id!==null&& password!==null && nickname!==null && checkPassword!==null && password===checkPassword && isChecked!==true?(
     <SignUpBtnWrapper
       type="button"
       onClick={()=>{
