@@ -25,7 +25,7 @@ const SignupPage = () => {
       }
     },[checkPassword,password] //변경이 있으면 useEffect가 실행된다
   );
-  
+
   // Request API.
   const signUp = async() =>{
     try{
@@ -69,9 +69,10 @@ const SignupPage = () => {
             value={id}
             onChange={(event) => {
               setId(event.target.value);
+              setIsChecked(null);
             }}
           />
-          <DupChkBtn dupCheck={dupCheck} isChecked={isChecked}/>
+          <DupChkBtn dupCheck={dupCheck} isChecked={isChecked} />
           <TextField
             label = "비밀번호"
             placeholder="비밀번호를 입력해주세요"
