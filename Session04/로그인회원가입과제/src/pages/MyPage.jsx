@@ -8,7 +8,8 @@ import NextBtn from "../components/NextBtn";
 import MyPageField from "../components/MyPageField";
 import styled from "styled-components";
 
-const MyPage = () => {
+const MyPage = (myPageProps) => {
+  const {myImage} = myPageProps;
   //ID를 받아오면 ID에 맞게
   const location = useLocation();
   const username = location.state.username;
@@ -21,7 +22,7 @@ const MyPage = () => {
         <h2>MyPage</h2>
         <br/>
         <ImageContainer>
-          <img alt="마이페이지 이미지" src="../assets/selfie.jpg"></img>
+          <Image alt="마이페이지 이미지" src={myImage}></Image>
         </ImageContainer>
         <MyPageField title="ID: " value={username}/>
         <MyPageField title="닉네임: " value={nickname}/>
@@ -45,13 +46,12 @@ const ImageContainer=styled.div`
   margin-top:10px;
   height:20vh;
   width: 20vh;
-  padding: 10px 15px;
 
-  background-color:black;
+  background-color: #5ca3fa;
 `
 const Image=styled.img`
-  margin-top:10px;
   height:20vh;
   width: 20vh;
-  padding: 10px 15px;
+
+  padding:5px 5px;
 `
