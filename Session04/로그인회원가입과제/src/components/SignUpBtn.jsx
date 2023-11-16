@@ -10,12 +10,12 @@ import { useNavigate } from 'react-router-dom';
             }}>회원가입</button> */}
 
 const SignUpBtn = (btnProps) => {
-  const {id, password, nickname, signUp} = btnProps;
+  const {id, password, nickname, signUp,isChecked} = btnProps;
   const navigate = useNavigate();
   const handleClickButton = () => {
     navigate('/login');
   }
-  return id!==null&& password!==null && nickname!==null?(
+  return id!==null&& password!==null && nickname!==null && isChecked!==null|true?(
     <SignUpBtnWrapper
       type="button"
       onClick={()=>{
