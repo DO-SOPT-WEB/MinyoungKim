@@ -10,9 +10,10 @@ import styled from "styled-components";
 
 const MyPage = () => {
   //ID를 받아오면 ID에 맞게
-  const location = useLocation();
-  const username = location.state.username;
-  const nickname = location.state.nickname;
+  // const location = useLocation();
+  // const username = location.state.username;
+  // const nickname = location.state.nickname;
+  const { state: { username, nickname } } = useLocation();
 
   return (
     <M.MainContainer>
