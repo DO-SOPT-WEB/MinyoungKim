@@ -19,7 +19,7 @@ const LoginPage = () => {
 
   //toast 타이머 설정
   useEffect(() => {
-    let timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setReject("");
     }, 2000);
     return () => {
